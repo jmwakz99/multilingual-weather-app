@@ -1,4 +1,4 @@
-import { toast } from 'react-toastify'
+import { toast } from 'react-toastify';
 
 export const notification = (
   message: string,
@@ -11,5 +11,5 @@ export const notification = (
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true
-  })
-}
+  });
+};

@@ -28,4 +28,4 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'off'
   },
   root: true
-}
+};

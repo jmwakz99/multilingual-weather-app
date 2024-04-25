@@ -10,7 +10,7 @@ axiosInstance.interceptors.response.use(
   response => response,
   (error: AxiosError) => {
     if (axios.isCancel(error)) {
-      window.console.log('Request canceled', error.message)
+      // do nothing
     }
 
     return Promise.reject(error)

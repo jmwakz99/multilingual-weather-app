@@ -1,9 +1,9 @@
-import { AxiosHeaders, Method } from 'axios';
+import { AxiosRequestHeaders, Method } from 'axios';
 
 export interface RequestConfig {
   url: string;
   method?: Method;
-  headers: AxiosHeaders;
+  headers: AxiosRequestHeaders;
   data?: any;
   responseType?: ResponseType;
   timeout?: number;

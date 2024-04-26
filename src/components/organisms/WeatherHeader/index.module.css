@@ -1,0 +1,11 @@
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 936px) {
+  .weather__header {
+    flex-direction: column;
+  }
+}

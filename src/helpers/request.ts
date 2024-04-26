@@ -52,7 +52,7 @@ const errorHandler = (error: AxiosError) => {
 };
 
 const requestHandler = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL
+  baseURL: process.env.REACT_APP_API_BASE_URL
 });
 
 requestHandler.interceptors.request.use(

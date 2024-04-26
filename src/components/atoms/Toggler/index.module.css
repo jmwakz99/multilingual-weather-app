@@ -1,14 +1,14 @@
 .toggler button {
-  background-color: none;
+  background-color: transparent;
   border: none;
   padding: 5px;
   cursor: pointer;
-  color: #000;
+  color: #fff;
   transition: all 0.5s;
 }
 
 .toggler .active {
-  background-color: black;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   transition: all 0.5s;
 }

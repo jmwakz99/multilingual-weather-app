@@ -1,5 +1,6 @@
 .temperature-text {
   font-size: 2rem;
+  margin-top: 16px;
 }
 
 .temperature-text sup {

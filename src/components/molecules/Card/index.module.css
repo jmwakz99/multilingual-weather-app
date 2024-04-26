@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 936px) {
-  .container {
-    width: 90%;
+  .card {
+    width: 100%;
   }
 }

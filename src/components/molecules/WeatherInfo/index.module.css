@@ -1,26 +1,28 @@
 .weather-info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-  margin-top: 3rem;
-  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-right: 1rem;
 }
 
 .weather-card {
   display: flex;
+  flex-direction: row;
+  justify-content: start;
   align-items: center;
   background: #1e1e1e;
-  padding: 1rem;
   border-radius: 10px;
+  padding: 10px 40px;
+  font-size: 14px;
 }
 
-.weather-card span {
+.weather-card svg {
   font-size: 1.5rem;
   margin-right: 1rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .weather-info {
-    grid-template-columns: none;
+    margin-bottom: 1rem;
   }
 }

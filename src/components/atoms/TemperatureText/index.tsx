@@ -2,7 +2,7 @@ import React from 'react';
 
 import classes from './index.module.css';
 
-const WeatherTemperature: React.FC = () => {
+const TemperatureText: React.FC = () => {
   return (
     <div className={classes['temperature-text']}>
       8<sup>o</sup>
@@ -10,4 +10,4 @@ const WeatherTemperature: React.FC = () => {
   );
 };
 
-export default WeatherTemperature;
+export default TemperatureText;

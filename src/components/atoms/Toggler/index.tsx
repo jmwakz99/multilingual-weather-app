@@ -3,8 +3,8 @@ import React from 'react';
 import classes from './index.module.css';
 
 interface IProps {
-  onToggleLanguage?: (language: 'English' | 'Swahili') => void;
-  language?: 'English' | 'Swahili';
+  onToggleLanguage: React.Dispatch<React.SetStateAction<'English' | 'Swahili'>>;
+  language: 'English' | 'Swahili';
 }
 
 const Toggler: React.FC<IProps> = props => {

@@ -6,6 +6,9 @@ import { notification } from '../utils/notification';
 const useWeather = () => {
   const [weatherDetails, setWeatherDetails] = useState<any>({});
   const [loading, setLoading] = useState<boolean>(true);
+  const [language, onToggleLanguage] = useState<'English' | 'Swahili'>(
+    'English'
+  );
 
   const fetchWeatherDetails = useCallback(async () => {
     setLoading(true);
@@ -30,7 +33,9 @@ const useWeather = () => {
 
   return {
     weatherDetails,
-    loading
+    loading,
+    language,
+    onToggleLanguage
   };
 };
 

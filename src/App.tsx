@@ -8,19 +8,24 @@ import './styles/global.css';
 import Toggler from './components/atoms/Toggler';
 
 function App() {
-  const { loading, weatherDetails } = useWeather();
+  const { loading, weatherDetails, language, onToggleLanguage } = useWeather();
 
   const values = useMemo(() => {
     return {
       loading,
-      weatherDetails
+      weatherDetails,
+      language,
+      onToggleLanguage
     };
-  }, [loading, weatherDetails]);
+  }, [language, loading, onToggleLanguage, weatherDetails]);
 
   return (
-    <WeatherContext.Provider value={values}>
+    <WeatherContext.Provider value={values as any}>
       <div>
-        <Toggler />
+        <Toggler
+          onToggleLanguage={onToggleLanguage}
+          language={language as 'English' | 'Swahili'}
+        />
         <ToastContainer />
       </div>
     </WeatherContext.Provider>

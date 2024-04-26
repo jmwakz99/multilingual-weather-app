@@ -2,8 +2,13 @@ import React from 'react';
 
 import classes from './index.module.css';
 
-const ForeCastText: React.FC = () => {
-  return <div className={classes['forecast-text']}>Clouds</div>;
+interface IProps {
+  forecast: string;
+}
+
+const ForeCastText: React.FC<IProps> = props => {
+  const { forecast = 'Clouds' } = props;
+  return <div className={classes['forecast-text']}>{forecast}</div>;
 };
 
 export default ForeCastText;

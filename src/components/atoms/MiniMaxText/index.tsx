@@ -2,14 +2,22 @@ import React from 'react';
 
 import classes from './index.module.css';
 
-const MiniMaxText: React.FC = () => {
+interface IProps {
+  minTemp: number;
+  maxTemp: number;
+}
+
+const MiniMaxText: React.FC<IProps> = props => {
+  const { minTemp = 0, maxTemp = 0 } = props;
   return (
     <div className={classes['minmax-text']}>
       <p>
-        Min: 7<sup>o</sup>
+        Min: {minTemp.toFixed(2)}
+        &#176;
       </p>
       <p>
-        Max: 9<sup>o</sup>
+        Max: {maxTemp.toFixed(2)}
+        &#176;
       </p>
     </div>
   );

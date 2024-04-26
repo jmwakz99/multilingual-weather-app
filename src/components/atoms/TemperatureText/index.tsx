@@ -2,10 +2,16 @@ import React from 'react';
 
 import classes from './index.module.css';
 
-const TemperatureText: React.FC = () => {
+interface IProps {
+  temp: number;
+}
+
+const TemperatureText: React.FC<IProps> = props => {
+  const { temp = 0 } = props;
   return (
     <div className={classes['temperature-text']}>
-      8<sup>o</sup>
+      {temp}
+      &#176;
     </div>
   );
 };

@@ -25,6 +25,7 @@ function App() {
       <WeatherTemplate
         onToggleLanguage={onToggleLanguage}
         language={language}
+        weatherDetails={weatherDetails?.data}
       />
     </WeatherContext.Provider>
   );

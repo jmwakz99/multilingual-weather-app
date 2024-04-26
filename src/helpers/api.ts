@@ -1,1 +1,1 @@
-export const ONE_CALL = 'onecall';
+export const ONE_CALL = 'weather';

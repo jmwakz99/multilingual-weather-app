@@ -20,9 +20,11 @@ interface IProps {
 const WeatherTemplate: React.FC<IProps> = props => {
   const { onToggleLanguage, language = 'English', weatherDetails } = props;
 
+  const locale = language === 'English' ? 'en-US' : 'sw-KE';
   const timeStamp = convertTimeStamp(
     weatherDetails?.dt,
-    weatherDetails?.timezone
+    weatherDetails?.timezone,
+    locale
   );
 
   const cityText = `${weatherDetails?.name || 'Nairobi'}, ${convertCountryCodeToName(

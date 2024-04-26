@@ -3,6 +3,7 @@ import { FaTemperatureThreeQuarters } from 'react-icons/fa6';
 import { WiHumidity } from 'react-icons/wi';
 import { LuWind } from 'react-icons/lu';
 import { IoSpeedometerOutline } from 'react-icons/io5';
+import { FormattedMessage } from 'react-intl';
 
 import classes from './index.module.css';
 
@@ -36,7 +37,9 @@ const WeatherInfo: React.FC<IProps> = props => {
       <div className={classes['weather-card']}>
         <span>{icon}</span>
         <div>
-          <p>{title}</p>
+          <p>
+            <FormattedMessage id={title} defaultMessage={title} />
+          </p>
           <p className={classes['weather-reel-feel']}>
             {value}
             &#176;

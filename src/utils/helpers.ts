@@ -1,6 +1,7 @@
 export const convertTimeStamp = (
   timestamp: number,
-  timezone: number
+  timezone: number,
+  locale: string
 ): string => {
   const convertTimezone: number = timezone / 3600;
 
@@ -17,7 +18,7 @@ export const convertTimeStamp = (
     hour12: true
   };
 
-  return date.toLocaleString('en-US', options);
+  return date.toLocaleString(locale, options);
 };
 
 export const convertCountryCodeToName = (countryCode: string): string => {

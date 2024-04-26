@@ -21,11 +21,11 @@ function App() {
 
   return (
     <WeatherContext.Provider value={values as any}>
+      <ToastContainer />
       <WeatherTemplate
         onToggleLanguage={onToggleLanguage}
         language={language}
       />
-      <ToastContainer />
     </WeatherContext.Provider>
   );
 }

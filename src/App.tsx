@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { WeatherContext } from './context/weatherContext';
 import useWeather from './hooks/useWeather';
 import './styles/global.css';
+import Toggler from './components/atoms/Toggler';
 
 function App() {
   const { loading, weatherDetails } = useWeather();
@@ -19,6 +20,7 @@ function App() {
   return (
     <WeatherContext.Provider value={values}>
       <div>
+        <Toggler />
         <ToastContainer />
       </div>
     </WeatherContext.Provider>

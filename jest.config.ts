@@ -1,23 +1,39 @@
-export {};
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
+// You can learn more about each option below in the Jest docs: https://jestjs.io/docs/configuration.
+
 module.exports = {
-  preset: 'ts-jest',
+  collectCoverageFrom: [
+    '**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**'
+  ],
   moduleNameMapper: {
-    // if your using tsconfig.paths thers is no harm in telling jest
-    '@components/(.*)$': '<rootDir>/src/components/$1',
-    '@/(.*)$': '<rootDir>/src/$1',
+    // Handle CSS imports (with CSS modules)
+    // https://jestjs.io/docs/webpack#mocking-css-modules
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
 
-    // mocking assests and styling
-    '^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/tests/mocks/fileMock.ts',
-    '^.+\\.(css|less|scss|sass)$': '<rootDir>/tests/mocks/styleMock.ts',
-    /* mock models and services folder */
-    '(assets|models|services)': '<rootDir>/tests/mocks/fileMock.ts'
+    // Handle CSS imports (without CSS modules)
+    '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
+
+    // Handle image imports
+    // https://jestjs.io/docs/webpack#handling-static-assets
+    '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$': `<rootDir>/__mocks__/fileMock.js`,
+
+    // Handle module aliases
+    '^@/components/(.*)$': '<rootDir>/src/components/$1',
+
+    '^@/pages/(.*)$1': '<rootDir>/pages/$1'
   },
-  // to obtain access to the matchers.
-  setupFilesAfterEnv: ['./setupTests.ts'],
-
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  modulePaths: ['<rootDir>'],
-  testEnvironment: 'jsdom'
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
+  transform: {
+    '^.+\\.ts?$': 'ts-jest',
+    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.js?$': 'babel-jest',
+    '^.+\\.jsx?$': 'babel-jest'
+  },
+  transformIgnorePatterns: [
+    '/node_modules/',
+    '^.+\\.module\\.(css|sass|scss)$'
+  ],
+  testEnvironment: 'jest-environment-jsdom'
 };

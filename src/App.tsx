@@ -9,6 +9,7 @@ import Toggler from './components/atoms/Toggler';
 import WeatherUnits from './components/molecules/WeatherUnits';
 import WeatherHeader from './components/organisms/WeatherHeader';
 import WeatherForeCast from './components/atoms/WeatherForecast';
+import WeatherTemperature from './components/atoms/WeatherTemperature';
 
 function App() {
   const { loading, weatherDetails, language, onToggleLanguage } = useWeather();
@@ -36,6 +37,7 @@ function App() {
           language={language as 'English' | 'Swahili'}
         />
         <WeatherForeCast />
+        <WeatherTemperature />
         <ToastContainer />
       </div>
     </WeatherContext.Provider>

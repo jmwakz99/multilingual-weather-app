@@ -1,0 +1,7 @@
+.weather-forecast {
+  background: #1e1e1e;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  color: #fff;
+}

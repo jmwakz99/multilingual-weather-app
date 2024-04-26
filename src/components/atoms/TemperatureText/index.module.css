@@ -1,0 +1,7 @@
+.temperature-text {
+  font-size: 2rem;
+}
+
+.temperature-text sup {
+  font-size: 20px;
+}

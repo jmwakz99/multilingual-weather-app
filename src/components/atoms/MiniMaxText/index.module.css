@@ -1,0 +1,10 @@
+.minmax-text {
+  display: flex;
+  justify-content: center;
+}
+
+.minmax-text p {
+  font-size: 14px;
+  margin: 0.5rem;
+  display: inline-block;
+}

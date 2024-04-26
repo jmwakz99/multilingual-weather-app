@@ -8,8 +8,9 @@ import './styles/global.css';
 import Toggler from './components/atoms/Toggler';
 import WeatherUnits from './components/molecules/WeatherUnits';
 import WeatherHeader from './components/organisms/WeatherHeader';
-import WeatherForeCast from './components/atoms/WeatherForecast';
-import WeatherTemperature from './components/atoms/WeatherTemperature';
+import WeatherForeCast from './components/atoms/ForecastText';
+import WeatherTemperature from './components/atoms/TemperatureText';
+import MiniMaxText from './components/atoms/MiniMaxText';
 
 function App() {
   const { loading, weatherDetails, language, onToggleLanguage } = useWeather();
@@ -38,6 +39,7 @@ function App() {
         />
         <WeatherForeCast />
         <WeatherTemperature />
+        <MiniMaxText />
         <ToastContainer />
       </div>
     </WeatherContext.Provider>

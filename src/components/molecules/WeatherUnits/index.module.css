@@ -1,0 +1,17 @@
+.weather-units {
+  font-size: 1.5rem;
+}
+
+.weather-units span {
+  cursor: pointer;
+}
+
+.weather-units span:first-child {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 936px) {
+  .weather-units {
+    margin-top: 1rem;
+  }
+}

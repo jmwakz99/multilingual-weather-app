@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import './App.css';
-// import useWeather from './hooks/useWeather';
+import { WeatherContext } from './context/weatherContext';
+import useWeather from './hooks/useWeather';
+import './styles/global.css';
 
 function App() {
-  // const { loading } = useWeather();
+  const { loading, weatherDetails } = useWeather();
+
+  const values = useMemo(() => {
+    return {
+      loading,
+      weatherDetails
+    };
+  }, [loading, weatherDetails]);
 
   return (
-    <div className="App">
-      Hello world! <ToastContainer />
-    </div>
+    <WeatherContext.Provider value={values}>
+      <div>
+        <ToastContainer />
+      </div>
+    </WeatherContext.Provider>
   );
 }
 

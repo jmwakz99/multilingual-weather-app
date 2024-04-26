@@ -30,8 +30,7 @@ const useWeather = () => {
 
   return {
     weatherDetails,
-    loading,
-    fetchWeatherDetails
+    loading
   };
 };
 

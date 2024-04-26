@@ -5,13 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { WeatherContext } from './context/weatherContext';
 import useWeather from './hooks/useWeather';
 import './styles/global.css';
-import Toggler from './components/atoms/Toggler';
-import WeatherUnits from './components/molecules/WeatherUnits';
-import WeatherHeader from './components/organisms/WeatherHeader';
-import WeatherForeCast from './components/atoms/ForecastText';
-import WeatherTemperature from './components/atoms/TemperatureText';
-import MiniMaxText from './components/atoms/MiniMaxText';
-import WeatherInfo from './components/molecules/WeatherInfo';
+import WeatherTemplate from './components/templates/WeatherTemplate';
 
 function App() {
   const { loading, weatherDetails, language, onToggleLanguage } = useWeather();
@@ -28,20 +22,10 @@ function App() {
   return (
     <WeatherContext.Provider value={values as any}>
       <div>
-        <Toggler
+        <WeatherTemplate
           onToggleLanguage={onToggleLanguage}
-          language={language as 'English' | 'Swahili'}
+          language={language}
         />
-        <WeatherUnits />
-
-        <WeatherHeader
-          onToggleLanguage={onToggleLanguage}
-          language={language as 'English' | 'Swahili'}
-        />
-        <WeatherForeCast />
-        <WeatherTemperature />
-        <MiniMaxText />
-        <WeatherInfo />
         <ToastContainer />
       </div>
     </WeatherContext.Provider>

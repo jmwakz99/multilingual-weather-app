@@ -11,6 +11,7 @@ import WeatherHeader from './components/organisms/WeatherHeader';
 import WeatherForeCast from './components/atoms/ForecastText';
 import WeatherTemperature from './components/atoms/TemperatureText';
 import MiniMaxText from './components/atoms/MiniMaxText';
+import WeatherInfo from './components/molecules/WeatherInfo';
 
 function App() {
   const { loading, weatherDetails, language, onToggleLanguage } = useWeather();
@@ -40,6 +41,7 @@ function App() {
         <WeatherForeCast />
         <WeatherTemperature />
         <MiniMaxText />
+        <WeatherInfo />
         <ToastContainer />
       </div>
     </WeatherContext.Provider>

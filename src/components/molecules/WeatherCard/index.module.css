@@ -1,0 +1,15 @@
+.weather-card {
+  display: flex;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.weather-card svg {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.weather-card p {
+  font-size: 14px;
+}

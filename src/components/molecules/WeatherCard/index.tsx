@@ -33,18 +33,16 @@ const WeatherInfo: React.FC<IProps> = props => {
   icon = pressure ? <IoSpeedometerOutline size={24} /> : icon;
 
   return (
-    <div className={classes['weather-info']}>
-      <div className={classes['weather-card']}>
-        <span>{icon}</span>
-        <div>
-          <p>
-            <FormattedMessage id={title} defaultMessage={title} />
-          </p>
-          <p className={classes['weather-reel-feel']}>
-            {value}
-            &#176;
-          </p>
-        </div>
+    <div className={classes['weather-card']}>
+      <span>{icon}</span>
+      <div>
+        <p>
+          <FormattedMessage id={title} defaultMessage={title} />
+        </p>
+        <p className={classes['weather-reel-feel']}>
+          {value}
+          &#176;
+        </p>
       </div>
     </div>
   );

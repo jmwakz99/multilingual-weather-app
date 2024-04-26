@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './index.module.css';
-import WeatherInfo from '../../molecules/WeatherInfo';
+import WeatherCard from '../../molecules/WeatherCard';
 
 interface IProps {
   feelsLike: number;
@@ -13,11 +13,11 @@ interface IProps {
 const WeatherBody: React.FC<IProps> = props => {
   const { feelsLike = 0, humidity = 0, wind = 0, pressure = 0 } = props;
   return (
-    <div className={classes['weather-body']}>
-      <WeatherInfo feelsLike={feelsLike} />
-      <WeatherInfo humidity={humidity} />
-      <WeatherInfo wind={wind} />
-      <WeatherInfo pressure={pressure} />
+    <div className={classes['weather-info']}>
+      <WeatherCard feelsLike={feelsLike} />
+      <WeatherCard humidity={humidity} />
+      <WeatherCard wind={wind} />
+      <WeatherCard pressure={pressure} />
     </div>
   );
 };

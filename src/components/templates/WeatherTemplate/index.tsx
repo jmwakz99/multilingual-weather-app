@@ -2,7 +2,7 @@ import React from 'react';
 
 import Card from '../../molecules/Card';
 import WeatherHeader from 'src/components/organisms/WeatherHeader';
-import WeatherBody from 'src/components/organisms/WeatherBody';
+import WeatherBody from 'src/components/organisms/WeatherInfo';
 import CityText from 'src/components/atoms/CityText';
 import DateTimeText from 'src/components/atoms/DateTimeText';
 import ForeCastText from 'src/components/atoms/ForecastText';

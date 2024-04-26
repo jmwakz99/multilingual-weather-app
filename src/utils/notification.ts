@@ -10,6 +10,6 @@ export const notification = (
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
-    draggable: true
+    draggable: true,
   });
 };

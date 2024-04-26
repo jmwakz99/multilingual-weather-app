@@ -7,11 +7,11 @@ const getWeatherDetails = (coordinates: { lat: number; lon: number }) => {
   return requestHandler.get(ONE_CALL, {
     params: {
       lat,
-      lon
-    }
+      lon,
+    },
   });
 };
 
 export const weatherService = {
-  getWeatherDetails
+  getWeatherDetails,
 };

@@ -7,7 +7,7 @@ interface IProps {
   language: 'English' | 'Swahili';
 }
 
-const Toggler: React.FC<IProps> = props => {
+const Toggler: React.FC<IProps> = (props) => {
   const { onToggleLanguage, language = 'English' } = props;
 
   const isActive = language === 'English';

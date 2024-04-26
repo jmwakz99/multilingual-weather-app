@@ -9,7 +9,7 @@ interface IProps {
   language: 'English' | 'Swahili';
 }
 
-const WeatherHeader: React.FC<IProps> = props => {
+const WeatherHeader: React.FC<IProps> = (props) => {
   const { onToggleLanguage, language = 'English' } = props;
   return (
     <div className={classes['weather-header']}>

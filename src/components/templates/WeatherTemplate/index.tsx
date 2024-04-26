@@ -17,7 +17,7 @@ interface IProps {
   weatherDetails: any;
 }
 
-const WeatherTemplate: React.FC<IProps> = props => {
+const WeatherTemplate: React.FC<IProps> = (props) => {
   const { onToggleLanguage, language = 'English', weatherDetails } = props;
 
   const locale = language === 'English' ? 'en-US' : 'sw-KE';

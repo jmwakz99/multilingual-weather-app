@@ -15,7 +15,7 @@ export const convertTimeStamp = (
     hour: 'numeric',
     minute: 'numeric',
     timeZone: `Etc/GMT${convertTimezone >= 0 ? '-' : '+'}${Math.abs(convertTimezone)}`,
-    hour12: true
+    hour12: true,
   };
 
   return date.toLocaleString(locale, options);

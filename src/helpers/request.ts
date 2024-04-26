@@ -33,7 +33,7 @@ export const coreRequestHandler = (request: RequestConfig): RequestConfig => {
     if (!request.params?.appid) {
       request.params = {
         ...request.params,
-        appid: process.env.REACT_APP_API_KEY
+        appid: process.env.REACT_APP_API_KEY,
       };
     }
     request.headers.Accept = 'application/json';
@@ -52,16 +52,16 @@ const errorHandler = (error: AxiosError) => {
 };
 
 const requestHandler = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL
+  baseURL: process.env.REACT_APP_API_BASE_URL,
 });
 
 requestHandler.interceptors.request.use(
-  request => coreRequestHandler(request as RequestConfig) as any,
-  error => Promise.reject(error as any)
+  (request) => coreRequestHandler(request as RequestConfig) as any,
+  (error) => Promise.reject(error as any)
 );
 
 requestHandler.interceptors.response.use(
-  response => response,
+  (response) => response,
   (error: AxiosError) => errorHandler(error)
 );
 export { requestHandler };

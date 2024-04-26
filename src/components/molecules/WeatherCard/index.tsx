@@ -14,7 +14,7 @@ interface IProps {
   pressure?: number;
 }
 
-const WeatherInfo: React.FC<IProps> = props => {
+const WeatherInfo: React.FC<IProps> = (props) => {
   const { feelsLike = 0, humidity = 0, wind = 0, pressure = 0 } = props;
   let title = feelsLike ? 'Real Feel' : 'Humidity';
   title = wind ? 'Wind' : title;

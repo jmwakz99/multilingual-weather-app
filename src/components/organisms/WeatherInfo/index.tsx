@@ -10,7 +10,7 @@ interface IProps {
   pressure: number;
 }
 
-const WeatherBody: React.FC<IProps> = props => {
+const WeatherBody: React.FC<IProps> = (props) => {
   const { feelsLike = 0, humidity = 0, wind = 0, pressure = 0 } = props;
   return (
     <div className={classes['weather-info']}>

@@ -16,7 +16,7 @@ const useWeather = () => {
     try {
       const weatherDetails = await weatherService.getWeatherDetails({
         lat: -1.286389,
-        lon: 36.817223
+        lon: 36.817223,
       });
 
       setWeatherDetails(weatherDetails);
@@ -35,7 +35,7 @@ const useWeather = () => {
     weatherDetails,
     loading,
     language,
-    onToggleLanguage
+    onToggleLanguage,
   };
 };
 

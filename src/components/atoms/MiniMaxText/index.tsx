@@ -8,7 +8,7 @@ interface IProps {
   maxTemp: number;
 }
 
-const MiniMaxText: React.FC<IProps> = props => {
+const MiniMaxText: React.FC<IProps> = (props) => {
   const { minTemp = 0, maxTemp = 0 } = props;
 
   return (

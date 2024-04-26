@@ -6,7 +6,7 @@ interface IProps {
   forecast: string;
 }
 
-const ForeCastText: React.FC<IProps> = props => {
+const ForeCastText: React.FC<IProps> = (props) => {
   const { forecast = 'Clouds' } = props;
   return <div className={classes['forecast-text']}>{forecast}</div>;
 };

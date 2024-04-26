@@ -6,7 +6,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Card: React.FC<IProps> = props => {
+const Card: React.FC<IProps> = (props) => {
   const { children } = props;
   return <div className={classes.card}>{children}</div>;
 };

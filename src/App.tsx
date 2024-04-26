@@ -19,7 +19,7 @@ function App() {
       loading,
       weatherDetails,
       language,
-      onToggleLanguage
+      onToggleLanguage,
     };
   }, [language, loading, onToggleLanguage, weatherDetails]);
 

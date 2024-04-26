@@ -6,7 +6,7 @@ interface IProps {
   weatherIcon: string;
 }
 
-const Icon: React.FC<IProps> = props => {
+const Icon: React.FC<IProps> = (props) => {
   const { weatherIcon = '04n' } = props;
 
   const imageSrc = `http://openweathermap.org/img/wn/${weatherIcon}@4x.png`;

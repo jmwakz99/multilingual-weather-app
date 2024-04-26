@@ -6,7 +6,7 @@ interface IProps {
   cityText: string;
 }
 
-const CityText: React.FC<IProps> = props => {
+const CityText: React.FC<IProps> = (props) => {
   const { cityText = 'Nairobi, Kenya' } = props;
 
   return <h1 className={classes['weather-city']}>{cityText}</h1>;

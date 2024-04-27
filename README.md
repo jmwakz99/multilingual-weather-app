@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# Multilingual Weather Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application to display weather information in multiple languages. Users can toggle between languages and view current weather details.
 
-## Available Scripts
+## Acknowledgements
 
-In the project directory, you can run:
+- [Atomic Design by Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
+- [OpenWeatherMap API](https://openweathermap.org/api)
 
-### `yarn start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://jmwakz99.github.io/multilingual-weather-app/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## API Reference
 
-### `yarn test`
+#### Get current weather data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```http
+  GET https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+```
 
-### `yarn build`
+| Parameter | Type     | Description                               |
+| :-------- | :------- | :---------------------------------------- |
+| `appid`   | `string` | **Required**. Your OpenWeatherMap API key |
+| `lon`     | `string` | **Required**. Longitude                   |
+| `lat`     | `string` | **Required**. Latitude                    |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Appendix
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Any additional information goes here
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Authors
 
-### `yarn eject`
+- [@johnsonmwakazi](https://www.github.com/jmwakz99)
+- [@Fuzu](https://fuzu.com)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Environment Variables
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run this project, you will need to add the following environment variables to your .env file
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`REACT_APP_API_BASE_UR:https://api.openweathermap.org/data/2.5`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`REACT_APP_API_KEY:YourOpenWeatherMapApiKey`
 
-## Learn More
+## Run Locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clone the project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  git clone https://github.com/jmwakz99/multilingual-weather-app.git
+```
+
+Go to the project directory
+
+```bash
+  cd multilingual-weather-app
+```
+
+Install dependencies
+
+```bash
+  yarn install
+```
+
+Start the server
+
+```bash
+  yarn start
+```
+
+## Tech Stack
+
+**Client:** React, Context API, CSS
+
+**Backend:** OpenWeatherMap API

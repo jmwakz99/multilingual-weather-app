@@ -1,10 +1,10 @@
-import { ONE_CALL } from '../helpers/CONSTANTS';
+import { WEATHER } from '../helpers/CONSTANTS';
 import { requestHandler } from '../helpers/request';
 
 const getWeatherDetails = (coordinates: { lat: number; lon: number }) => {
   const { lat, lon } = coordinates;
 
-  return requestHandler.get(ONE_CALL, {
+  return requestHandler.get(WEATHER, {
     params: {
       lat,
       lon,

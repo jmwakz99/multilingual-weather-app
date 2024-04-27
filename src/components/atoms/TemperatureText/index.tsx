@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './index.module.css';
 
 interface IProps {
-  temp: number;
+  temp?: number;
 }
 
 const TemperatureText: React.FC<IProps> = (props) => {

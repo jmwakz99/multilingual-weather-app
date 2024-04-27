@@ -6,7 +6,7 @@ import classes from './index.module.css';
 
 interface IProps {
   onToggleLanguage: React.Dispatch<React.SetStateAction<'English' | 'Swahili'>>;
-  language: 'English' | 'Swahili';
+  language?: 'English' | 'Swahili';
 }
 
 const WeatherHeader: React.FC<IProps> = (props) => {

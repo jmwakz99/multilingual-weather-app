@@ -1,19 +1,22 @@
 import React from 'react';
 
+import CityText from '../../atoms/CityText';
+import DateTimeText from '../../atoms/DateTimeText';
+import ForeCastText from '../../atoms/ForecastText';
+import Icon from '../../atoms/Icon';
+import TemperatureText from '../../atoms/TemperatureText';
+import MiniMaxText from '../../atoms/MiniMaxText';
 import Card from '../../molecules/Card';
-import WeatherHeader from 'src/components/organisms/WeatherHeader';
-import WeatherBody from 'src/components/organisms/WeatherInfo';
-import CityText from 'src/components/atoms/CityText';
-import DateTimeText from 'src/components/atoms/DateTimeText';
-import ForeCastText from 'src/components/atoms/ForecastText';
-import Icon from 'src/components/atoms/Icon';
-import TemperatureText from 'src/components/atoms/TemperatureText';
-import MiniMaxText from 'src/components/atoms/MiniMaxText';
-import { convertCountryCodeToName, convertTimeStamp } from 'src/utils/helpers';
+import WeatherHeader from '../../organisms/WeatherHeader';
+import WeatherInfo from '../../organisms/WeatherInfo';
+import {
+  convertCountryCodeToName,
+  convertTimeStamp,
+} from '../../../utils/helpers';
 
 interface IProps {
   onToggleLanguage: React.Dispatch<React.SetStateAction<'English' | 'Swahili'>>;
-  language: 'English' | 'Swahili';
+  language?: 'English' | 'Swahili';
   weatherDetails: any;
 }
 
@@ -45,7 +48,7 @@ const WeatherTemplate: React.FC<IProps> = (props) => {
           maxTemp={weatherDetails?.main?.temp_max}
         />
       </center>
-      <WeatherBody
+      <WeatherInfo
         feelsLike={weatherDetails?.main?.feels_like}
         humidity={weatherDetails?.main?.humidity}
         wind={weatherDetails?.wind?.speed}

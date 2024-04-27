@@ -1,13 +1,13 @@
 import React from 'react';
 
-import classes from './index.module.css';
 import WeatherCard from '../../molecules/WeatherCard';
+import classes from './index.module.css';
 
 interface IProps {
-  feelsLike: number;
-  humidity: number;
-  wind: number;
-  pressure: number;
+  feelsLike?: number;
+  humidity?: number;
+  wind?: number;
+  pressure?: number;
 }
 
 const WeatherBody: React.FC<IProps> = (props) => {

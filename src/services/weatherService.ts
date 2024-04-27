@@ -1,4 +1,4 @@
-import { ONE_CALL } from '../helpers/api';
+import { ONE_CALL } from '../helpers/CONSTANTS';
 import { requestHandler } from '../helpers/request';
 
 const getWeatherDetails = (coordinates: { lat: number; lon: number }) => {

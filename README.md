@@ -42,6 +42,12 @@ To run this project, you will need to add the following environment variables to
 
 `REACT_APP_API_KEY:YourOpenWeatherMapApiKey`
 
+Load these variables with the following command
+
+```bash
+  source .env
+```
+
 ## Run Locally
 
 Clone the project

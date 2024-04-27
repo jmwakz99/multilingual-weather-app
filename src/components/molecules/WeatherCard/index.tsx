@@ -8,14 +8,14 @@ import { FormattedMessage } from 'react-intl';
 import classes from './index.module.css';
 
 interface IProps {
-  feelsLike?: number;
-  humidity?: number;
-  wind?: number;
-  pressure?: number;
+  feelsLike: number;
+  humidity: number;
+  wind: number;
+  pressure: number;
 }
 
 const WeatherInfo: React.FC<IProps> = (props) => {
-  const { feelsLike = 0, humidity = 0, wind = 0, pressure = 0 } = props;
+  const { feelsLike, humidity, wind, pressure } = props;
   let title = feelsLike ? 'Real Feel' : 'Humidity';
   title = wind ? 'Wind' : title;
   title = pressure ? 'Pressure' : title;
@@ -32,6 +32,10 @@ const WeatherInfo: React.FC<IProps> = (props) => {
   icon = wind ? <LuWind size={24} /> : icon;
   icon = pressure ? <IoSpeedometerOutline size={24} /> : icon;
 
+  let units = feelsLike ? <span>&#176;</span> : '%';
+  units = wind ? 'm/s' : units;
+  units = pressure ? 'hPa' : units;
+
   return (
     <div className={classes['weather-card']}>
       <span>{icon}</span>
@@ -41,7 +45,7 @@ const WeatherInfo: React.FC<IProps> = (props) => {
         </p>
         <p className={classes['weather-reel-feel']}>
           {value}
-          &#176;
+          {units}
         </p>
       </div>
     </div>

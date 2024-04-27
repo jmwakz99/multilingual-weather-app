@@ -4,9 +4,9 @@ import '@testing-library/jest-dom';
 import TemperatureText from '../index';
 
 describe('TemperatureText', () => {
-  test('renders with default temp of 0', () => {
+  test('renders with default temp of 15', () => {
     render(<TemperatureText />);
-    const text = screen.getByText('0°');
+    const text = screen.getByText('15°');
     expect(text).toBeInTheDocument();
   });
 

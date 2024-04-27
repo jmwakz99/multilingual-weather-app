@@ -7,7 +7,7 @@ interface IProps {
 }
 
 const TemperatureText: React.FC<IProps> = (props) => {
-  const { temp = 0 } = props;
+  const { temp = 15 } = props;
   return (
     <div className={classes['temperature-text']}>
       {temp}

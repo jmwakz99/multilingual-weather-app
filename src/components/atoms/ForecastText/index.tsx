@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './index.module.css';
 
 interface IProps {
-  forecast: string;
+  forecast?: string;
 }
 
 const ForeCastText: React.FC<IProps> = (props) => {

@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './index.module.css';
 
 interface IProps {
-  timeStamp: string;
+  timeStamp?: string;
 }
 
 const DateTimeText: React.FC<IProps> = (props) => {

@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './index.module.css';
 
 interface IProps {
-  cityText: string;
+  cityText?: string;
 }
 
 const CityText: React.FC<IProps> = (props) => {

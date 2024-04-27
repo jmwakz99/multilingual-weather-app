@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './index.module.css';
 
 interface IProps {
-  weatherIcon: string;
+  weatherIcon?: string;
 }
 
 const Icon: React.FC<IProps> = (props) => {

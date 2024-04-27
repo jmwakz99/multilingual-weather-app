@@ -4,8 +4,8 @@ import { FormattedMessage } from 'react-intl';
 import classes from './index.module.css';
 
 interface IProps {
-  minTemp: number;
-  maxTemp: number;
+  minTemp?: number;
+  maxTemp?: number;
 }
 
 const MiniMaxText: React.FC<IProps> = (props) => {

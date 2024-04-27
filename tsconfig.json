@@ -9,10 +9,16 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
+    "jsx": "react-jsx",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts"],
+  "include": [
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.json",
+    "./typings/*.ts"
+  ],
   "exclude": ["node_modules", "dist", "__tests__", "coverage"]
 }
